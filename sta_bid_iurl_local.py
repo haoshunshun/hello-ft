@@ -10,7 +10,6 @@ staDict={}
 time_tuple = time.strptime(last_hour,"%Y-%m-%d_%H")
 lastTimeBlockStamp = int(time.mktime(time_tuple))
 bid_path = '/home/work/run_env/DEPLOY/ssp-report/input/bid.'+last_hour+'.log'
-#iurl_adspot_file = open('/home/work/run_env/hs/iurl/iurl_file_'+last_hour,'w+')
 for bid_line in open(bid_path):
     try:
         if "SUCCESS" in bid_line:
@@ -64,3 +63,4 @@ for k,v in bidDict.items():
     db.commit()
     cursor.close()
     db.close()
+#this is git test
